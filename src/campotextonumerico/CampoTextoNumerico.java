@@ -17,6 +17,7 @@ import javafx.scene.control.TextField;
 public class CampoTextoNumerico extends TextField {
     public CampoTextoNumerico() {
         super();
+        /*Añadimos la vista de campo de texto numérico*/
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CampoTextoNumerico.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -28,6 +29,7 @@ public class CampoTextoNumerico extends TextField {
         }
     }
     
+    /*Método para que cuando se escriba solo se implementen números*/
     @Override
     public void replaceText(int start, int end, String text)
     {
@@ -37,6 +39,7 @@ public class CampoTextoNumerico extends TextField {
         }
     }
 
+    /*Método para que cuando se sustituya el contenido se escriban solo numeros*/
     @Override
     public void replaceSelection(String text)
     {
