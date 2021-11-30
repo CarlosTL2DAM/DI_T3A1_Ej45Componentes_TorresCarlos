@@ -76,6 +76,7 @@ public class Temporizador extends AnchorPane {
         EventHandler onFinished = new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent t) {
+                timeline.stop();
                 fireEvent(t);
             }
         };
